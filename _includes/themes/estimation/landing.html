@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta content="True" name="HandheldFriendly" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+<meta name="viewport" content="width=device-width" />
+
+<title>{{ page.title }}</title> {% if page.description %}
+<meta name="description" content="{{ page.description }}">
+{% endif %}
+<meta name="author" content="{{ site.author.name }}" />
+
+
+<!--*************************
+*                           *
+*         CSS FILES         *
+*                           *
+************************* -->
+
+<!-- Google Fonts -->
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+<!-- Due to IE8 inabillity to load multiple font weights from Google Fonts, we need to import them separately -->
+<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300" /> 
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:700" /> 
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:800" />
+<![endif]-->
+
+<!-- Font Awesome -->
+<link href="{{ ASSET_PATH }}/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- edit the value to change the skin color -->
+<link rel="stylesheet" href="{{ ASSET_PATH }}/css/skins/tangerine.css" />
+<!-- used for animation effects on elements -->
+<link rel="stylesheet" href="{{ ASSET_PATH }}/css/animate.min.css" />
+<!-- styling for Nivo Lightbox gallery -->
+<link rel="stylesheet" href="{{ ASSET_PATH }}/css/nivo-lightbox.css" />
+<link rel="stylesheet" href="{{ ASSET_PATH }}/css/default.css" />
+<!-- styles for the Revolution Slider -->
+<link rel="stylesheet" href="{{ ASSET_PATH }}/plugins/rs-plugin/css/settings.css" media="screen" />
+<!--imports the media queries css file-->
+<link rel="stylesheet" href="{{ ASSET_PATH }}/css/responsive.css" />
+</head>
+
+
+<!--*************************
+*                           *
+*      JAVASCRIPT FILES     *
+*                           *
+************************* -->
+
+<!-- imports modernizr plugin for detecting browser features -->
+<script src="{{ ASSET_PATH }}/js/modernizr.custom.js"></script>
+
+<!--[if IE 8]>
+    <link href="{{ ASSET_PATH }}/css/ie8.css" rel="stylesheet" />
+    <script src="{{ ASSET_PATH }}/js/respond.js"></script>
+<![endif]-->
+
+
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+
+    <header id="header">
+        <div class="container-center cf">
+            <div class="logo">
+                <a href="index.html"><img src="{{ ASSET_PATH }}/img/logo.png" alt="Logo Estimation" /></a>
+            </div>
+            <!-- end logo -->
+
+            <div class="search-container">
+                <a id="toggle-search" class="search-button search-open" href="#"><i class="fa fa-search"></i></a>
+                <div class="search-panel cf">
+                    <div class="search-form">
+                        <form method="post" action="">
+                            <input type="text" id="header-search-box" onfocus="if(this.value=='Enter keywords...')this.value='';" onblur="if(this.value=='')this.value='Enter keywords...';" value="Enter keywords...">
+                            <button id="header-search-button" type="submit" name="submit">Go !</button>
+                        </form>
+                    </div>
+                    <!-- end search-form -->
+                </div>
+                <!-- end search-panel -->
+            </div>
+            <!-- search-container -->
+
+            <nav id="main-navigation" class="navigation cf">
+                <ul>
+                    <li><a class="active-nav" href="index.html">Home<span>Description Text</span></a>
+                        <ul>
+                            <li><a href="index-ver-2.html">Homepage 2</a></li>
+                            <li><a href="index-ver-3.html">Homepage 3</a></li>
+                            <li><a href="index-ver-4.html">Homepage 4</a></li>
+                            <li><a href="index-flex-content.html">Flex Content Slider</a></li>
+                            <li><a href="index-flex-image.html">Flex Image Slider</a></li>
+                            <li><a href="index-nav-light.html">Navigation Style 2</a></li>
+                            <li><a href="index-nav-simple.html">Navigation Style 3</a></li>
+                        </ul></li>
+                    <li><a href="portfolio-4.html">Portfolio<span>Description Text</span></a>
+                        <ul>
+                            <li><a href="portfolio-2.html">2 Columns</a></li>
+                            <li><a href="portfolio-3.html">3 Columns</a></li>
+                            <li><a href="portfolio-4.html">4 Columns</a></li>
+                            <li><a href="portfolio-single.html">Portfolio Single Page</a></li>
+                        </ul></li>
+                    <li><a href="about.html">Pages<span>Description Text</span></a>
+                        <ul>
+                            <li><a href="shop-sidebar.html">Shop</a>
+                                <ul>
+                                    <li><a href="shop-sidebar.html">Shop Sidebar</a></li>
+                                    <li><a href="shop-3-col.html">Shop 3 Columns</a></li>
+                                    <li><a href="shop-4-col.html">Shop 4 Columns</a></li>
+                                    <li><a href="product-page.html">Product Page</a></li>
+                                    <li><a href="product-page-sidebar.html">Product Page Sidebar</a></li>
+                                    <li><a href="cart.html">Shopping Cart</a></li>
+                                </ul></li>
+                            <li><a href="about-full.html">About - Full</a></li>
+                            <li><a href="services-full.html">Services</a></li>
+                            <li><a href="team.html">Meet The Team</a></li>
+                            <li><a href="404.html">404 Page</a></li>
+                            <li><a href="faq.html">FAQ Page</a></li>
+                            <li><a href="sidebar-alt.html">Sidebar Title Alt. Icon</a></li>
+                            <li><a href="sidebar-left.html">Sidebar Left</a></li>
+                        </ul></li>
+                    <li><a href="elements.html">Elements<span>Description Text</span></a>
+                        <ul>
+                            <li><a href="elements.html">Page Elements</a></li>
+                            <li><a href="typography.html">Typography</a></li>
+                            <li><a href="page-title-2.html">Page Titles</a>
+                                <ul>
+                                    <li><a href="page-title-2.html">Page Title 2</a></li>
+                                    <li><a href="page-title-3.html">Page Title 3</a></li>
+                                    <li><a href="page-title-4.html">Page Title 4</a></li>
+                                    <li><a href="page-title-blank.html">Page Title No Bg</a></li>
+                                </ul></li>
+                            <li><a href="pricing-tables.html">Pricing Tables</a></li>
+                            <li><a href="grid.html">Column Layout</a></li>
+                        </ul></li>
+                    <li><a href="blog.html">Blog<span>Description Text</span></a>
+                        <ul>
+                            <li><a href="blog.html">Blog Classic</a> % include JB/analytics %}
+                            <li><a href="blog-full.html">Blog Full Width</a></li>
+                            <li><a href="blog-2.html">Blog Small Image</a></li>
+                            <li><a href="blog-single.html">Blog Post Right Sidebar</a></li>
+                            <li><a href="blog-single-full.html">Blog Post Full Width</a></li>
+                        </ul></li>
+                    <li><a href="contact.html">Contact<span>Description Text</span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- end container-center -->
+    </header>
+
+    <!--Revolution Slider begin-->
+    <section class="container-slider">
+        <div id="slider">
+            <ul>
+
+                <!-- Slide 1 -->
+                <li data-transition="fade" data-slotamount="7">
+                    <!-- Required Background Image  --> <img src="{{ ASSET_PATH }}/img/slides/bg/001.jpg" alt="Image Description" /> <!-- Big Multi Row Title --> <!-- Row 1 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="90" data-speed="500" data-start="1200" data-easing="easeInExpo">We</div> <!-- Row 2 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="146" data-speed="500" data-start="1700" data-easing="easeInExpo">Really</div> <!-- Row 3 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="202" data-speed="500" data-start="2000" data-easing="easeInExpo">Mean</div> <!-- Row 4 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="258" data-speed="500" data-start="2300" data-easing="easeInExpo">Business</div> <!-- Description Caption -->
+                    <div class="big-title-description caption lfl ltb" data-x="left" data-hoffset="30" data-y="328" data-speed="500" data-start="2600" data-easing="easeInExpo">
+                        <p>
+                            You know you came to the right place.<br /> Stop and take a look around.
+                        </p>
+                    </div> <!-- Image Caption -->
+                    <div class="caption lfr str" data-x="right" data-hoffset="-30" data-y="0" data-speed="500" data-start="500" data-easing="easeOutExpo">
+                        <div>
+                            <img src="{{ ASSET_PATH }}/img/slides/001.png" alt="Image Description" />
+                        </div>
+                    </div>
+
+                </li>
+                <!-- end Slide 1 -->
+
+                <!-- Slide 2 -->
+                <li data-transition="fade" data-slotamount="7">
+                    <!-- Required Background Image  --> <img src="{{ ASSET_PATH }}/img/slides/bg/002.jpg" alt="Image Description" /> <!-- Row 1 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="120" data-speed="500" data-start="1200" data-easing="easeInExpo">Have A</div> <!-- Row 2 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="176" data-speed="500" data-start="1700" data-easing="easeInExpo">Burning</div> <!-- Row 3 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="232" data-speed="500" data-start="2000" data-easing="easeInExpo">Question?</div> <!-- Description Caption -->
+                    <div class="big-title-description caption lfl ltb" data-x="left" data-hoffset="30" data-y="313" data-speed="500" data-start="2300" data-easing="easeInExpo">
+                        <p>
+                            Our Help Desk is available to <br />you around the clock, 24/7!
+                        </p>
+                    </div> <!-- Image Caption -->
+                    <div class="caption lfr str" data-x="right" data-hoffset="-30" data-y="30" data-speed="500" data-start="500" data-easing="easeOutExpo">
+                        <img src="{{ ASSET_PATH }}/img/slides/003.png" alt="Image Description" />
+                    </div>
+
+                </li>
+                <!-- end Slide 2 -->
+
+                <!-- Slide 3 -->
+                <li data-transition="fade" data-slotamount="7">
+                    <!-- Required Background Image  --> <img src="{{ ASSET_PATH }}/img/slides/bg/003.jpg" alt="Image Description" /> <!-- Row 1 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="90" data-speed="500" data-start="1200" data-easing="easeInExpo">We</div> <!-- Row 2 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="146" data-speed="500" data-start="1700" data-easing="easeInExpo">Have It</div> <!-- Row 3 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="202" data-speed="500" data-start="2000" data-easing="easeInExpo">Under</div> <!-- Row 4 text -->
+                    <div class="big-title-row caption lfl ltb" data-x="left" data-hoffset="30" data-y="258" data-speed="500" data-start="2300" data-easing="easeInExpo">Control</div> <!-- Description Caption -->
+                    <div class="big-title-description caption lfl ltb" data-x="left" data-hoffset="30" data-y="313" data-speed="500" data-start="2300" data-easing="easeInExpo">
+                        <p>
+                            Our Help Desk is available to <br />you around the clock, 24/7!
+                        </p>
+                    </div> <!-- Image Caption -->
+                    <div class="caption lfr str" data-x="right" data-hoffset="-30" data-y="30" data-speed="500" data-start="500" data-easing="easeOutExpo">
+                        <img src="{{ ASSET_PATH }}/img/slides/002.png" alt="Image Description" />
+                    </div>
+
+                </li>
+                <!-- end Slide 3 -->
+            </ul>
+        </div>
+        <!-- end Slider -->
+    </section>
+    <!--end Revolution Slider-->
+
+    <section class="content">
+        <div class="container-center">
+
+            <div class="tagline col-row animated" data-animation="fadeInUp">
+                <section class="three-fourth">
+                    <h2>
+                        Welcome to <span>Estimation</span> - a business html template
+                    </h2>
+                    <p>Phasellus blandit elementum tellus, nec adipiscing dui elementum non. Nam et lacus nunc. Pellentesque aliquam a sem at consectetur. Vivamus id velit vitae arcu lacinia sollicitudin. Maecenas sit amet imperdiet risus, vel posuere tortor.</p>
+                </section>
+                <!-- end section -->
+
+                <div class="one-fourth cf">
+                    <a class="big-button" href="#">Learn More<span class="btn-arrow"><i class="fa fa-angle-right"></i></span></a>
+                </div>
+                <!-- end big-button -->
+
+            </div>
+            <!-- end tagline -->
+
+        </div>
+        <!-- end container-center -->
+    </section>
+    <!-- end content -->
+
+    <section class="color-box-holder box-4 section-bg-1">
+
+        <div class="container-center cf">
+            <div class="color-box animated" data-animation="fadeInUp">
+                <div class="color-box-title tilted">
+                    <h3>A Twist In A Myth</h3>
+                    <h4 class="subtitle">
+                        <span>Mandatory Subtitle</span>
+                    </h4>
+                </div>
+                <!-- end color-box-title -->
+                <i class="fa fa-globe"></i>
+                <p>Fusce scelerisque pellentesqu suspendisse elementum tellus vel volutpat. Proin sapien.</p>
+                <a class="button small-btn" href="#">Read More</a>
+            </div>
+            <!-- end box -->
+
+            <div class="color-box animated" data-animation="fadeInUp" data-animation-delay="200">
+                <div class="color-box-title tilted">
+                    <h3>Ride Into Obsession</h3>
+                    <h4 class="subtitle">
+                        <span>Mandatory Subtitle</span>
+                    </h4>
+                </div>
+                <!-- end color-box-title -->
+                <i class="fa fa-group"></i>
+                <p>Fusce scelerisque pellentesqu suspendisse elementum tellus vel volutpat. Proin sapien.</p>
+                <a class="button small-btn" href="#">Read More</a>
+            </div>
+            <!-- end box -->
+
+            <div class="color-box animated" data-animation="fadeInUp" data-animation-delay="400">
+                <div class="color-box-title tilted">
+                    <h3>By The Gates of Moria</h3>
+                    <h4 class="subtitle">
+                        <span>Mandatory Subtitle</span>
+                    </h4>
+                </div>
+                <!-- end color-box-title -->
+                <i class="fa fa-leaf"></i>
+                <p>Fusce scelerisque pellentesqu suspendisse elementum tellus vel volutpat. Proin sapien.</p>
+                <a class="button small-btn" href="#">Read More</a>
+            </div>
+            <!-- end box -->
+
+            <div class="color-box animated" data-animation="fadeInUp" data-animation-delay="600">
+                <div class="color-box-title tilted">
+                    <h3>Time Stands Still</h3>
+                    <h4 class="subtitle">
+                        <span>Mandatory Subtitle</span>
+                    </h4>
+                </div>
+                <!-- end color-box-title -->
+                <i class="fa fa-power-off"></i>
+                <p>Fusce scelerisque pellentesqu suspendisse elementum tellus vel volutpat. Proin sapien.</p>
+                <a class="button small-btn" href="#">Read More</a>
+            </div>
+            <!-- end box -->
+        </div>
+        <!-- end container-center -->
+
+    </section>
+    <!-- end color-box-holder -->
+
+    <section class="content section-bg-4">
+
+        <div class="container-center">
+
+            <div class="section-title align-center">
+                <h2>Features and Content</h2>
+                <h3 class="sub-heading">Lorem ipsum dolor sit amet dabipus</h3>
+            </div>
+
+            <div class="col-row">
+                <div class="one-half animated" data-animation="fadeInLeft">
+                    <h3>About Estimation</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet purus quis metus imperdiet fermentum. Suspendisse hendrerit id lacus id lobortis. Vestibulum quam elit, dapibus ac augue ut, porttitor viverra dui.</p>
+                    <p>Pellentesque imperdiet purus quis metus imperdiet fermentum. Suspendisse hendrerit id lacus id lobortis. Vestibulum quam elit, apibus ac augue ut, porttitor viverra dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+                    <h3>What We Offer You</h3>
+                    <ul class="fa-ul custom-list">
+                        <li><i class="fa-li fa fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque</li>
+                        <li><i class="fa-li fa fa-check"></i>Suspendisse hendrerit id lacus id lobortis vestibulum quam elit</li>
+                        <li><i class="fa-li fa fa-check"></i>Fusce scelerisque pellentesqu suspendisse elementum adipiscing</li>
+                        <li><i class="fa-li fa fa-check"></i>Feugiat sodales pretium massa euismod tempus suspendisse hendrerit</li>
+                    </ul>
+
+                </div>
+                <!-- end one-half -->
+
+                <div class="one-half animated" data-animation="fadeInRight">
+                    <h3>Features</h3>
+
+                    <div class="col-row">
+                        <div class="feature-box one-fourth">
+                            <div class="feature-box-title cf">
+                                <div class="feature-box-icon">
+                                    <i class="fa fa-gear"></i>
+                                </div>
+                                <h4>Service One</h4>
+                            </div>
+                            <!-- end feature-box-title -->
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet purus quis metus</p>
+                        </div>
+
+                        <div class="feature-box one-fourth">
+                            <div class="feature-box-title cf">
+                                <div class="feature-box-icon">
+                                    <i class="fa fa-bars"></i>
+                                </div>
+                                <h4>Service Two</h4>
+                            </div>
+                            <!-- end feature-box-title -->
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet purus quis metus</p>
+                        </div>
+
+                        <div class="feature-box one-fourth">
+                            <div class="feature-box-title cf">
+                                <div class="feature-box-icon">
+                                    <i class="fa fa-pencil"></i>
+                                </div>
+                                <h4>Service Three</h4>
+                            </div>
+                            <!-- end feature-box-title -->
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet purus quis metus</p>
+                        </div>
+
+                        <div class="feature-box one-fourth">
+                            <div class="feature-box-title cf">
+                                <div class="feature-box-icon">
+                                    <i class="fa fa-refresh"></i>
+                                </div>
+                                <h4>Service Four</h4>
+                            </div>
+                            <!-- end feature-box-title -->
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet purus quis metus</p>
+                        </div>
+                    </div>
+                    <!-- end col-row -->
+
+                </div>
+                <!-- end one-half -->
+            </div>
+            <!-- end col-row -->
+
+        </div>
+        <!-- end container-center -->
+
+    </section>
+    <!-- end -->
+
+    <div class="separator-1"></div>
+    <!-- end separator -->
+
+    <section class="content">
+        <div class="container-center">
+            <div class="col-row">
+
+                <div class="one-fourth">
+                    <div class="section-title align-left">
+                        <h2>Recent Projects</h2>
+                        <h3 class="sub-heading">Check Out Our Latest Creations</h3>
+                    </div>
+                    <p>Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit erod proin viverodio.</p>
+                </div>
+                <!-- end one-fourth -->
+
+                <div class="carousel-wrap three-fourth">
+                    <div class="carousel-container flex-nav-left">
+                        <ul class="slides">
+                            <li class="one-fourth animated" data-animation="fadeInUp">
+                                <div class="p-item">
+                                    <figure>
+                                        <div class="overlay-container">
+
+                                            <img src="{{ ASSET_PATH }}/img/portfolio/401.jpg" alt="Image description" />
+
+                                            <div class="overlay">
+                                                <div class="overlay-buttons">
+                                                    <a href="img/portfolio/large/001.jpg" data-nivo-rel="nivoLightbox"> <i class="fa fa-arrows-alt"></i>
+                                                    </a> <a class="last" href="#"><i class="fa fa-chain"></i></a>
+                                                </div>
+                                                <!-- end overlay-buttons -->
+                                                <div class="overlay-bg"></div>
+                                                <!-- end overlay-bg -->
+                                            </div>
+                                            <!-- end overlay -->
+
+                                        </div>
+                                        <!-- end overlay-container -->
+
+                                        <figcaption>
+                                            <h5>Wheel of Time</h5>
+                                            <span>Graphic Design</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- end p-item -->
+                            </li>
+
+                            <li class="one-fourth animated" data-animation="fadeInUp" data-animation-delay="150">
+                                <div class="p-item">
+                                    <figure>
+                                        <div class="overlay-container">
+
+                                            <img src="{{ ASSET_PATH }}/img/portfolio/401.jpg" alt="Image description" />
+
+                                            <div class="overlay">
+                                                <div class="overlay-buttons">
+                                                    <a href="img/portfolio/large/001.jpg" data-nivo-rel="nivoLightbox"> <i class="fa fa-play"></i>
+                                                    </a> <a class="last" href="#"><i class="fa fa-chain"></i></a>
+                                                </div>
+                                                <!-- end overlay-buttons -->
+                                                <div class="overlay-bg"></div>
+                                                <!-- end overlay-bg -->
+                                            </div>
+                                            <!-- end overlay -->
+
+                                        </div>
+                                        <!-- end overlay-container -->
+
+                                        <figcaption>
+                                            <h5>And The Story Ends</h5>
+                                            <span>Web Design</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- end p-item -->
+                            </li>
+
+                            <li class="one-fourth animated" data-animation="fadeInUp" data-animation-delay="300">
+                                <div class="p-item">
+                                    <figure>
+                                        <div class="overlay-container">
+
+                                            <img src="{{ ASSET_PATH }}/img/portfolio/401.jpg" alt="Image description" />
+
+                                            <div class="overlay">
+                                                <div class="overlay-buttons">
+                                                    <a href="img/portfolio/large/001.jpg" data-nivo-rel="nivoLightbox"> <i class="fa fa-arrows-alt"></i>
+                                                    </a> <a class="last" href="#"><i class="fa fa-chain"></i></a>
+                                                </div>
+                                                <!-- end overlay-buttons -->
+                                                <div class="overlay-bg"></div>
+                                                <!-- end overlay-bg -->
+                                            </div>
+                                            <!-- end overlay -->
+
+                                        </div>
+                                        <!-- end overlay-container -->
+
+                                        <figcaption>
+                                            <h5>Tanelorn</h5>
+                                            <span>Graphic Design - Web Design</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- end p-item -->
+                            </li>
+
+                            <li class="one-fourth animated" data-animation="fadeInUp" data-animation-delay="450">
+                                <div class="p-item">
+                                    <figure>
+                                        <div class="overlay-container">
+
+                                            <img src="{{ ASSET_PATH }}/img/portfolio/401.jpg" alt="Image description" />
+
+                                            <div class="overlay">
+                                                <div class="overlay-buttons">
+                                                    <a href="img/portfolio/large/001.jpg" data-nivo-rel="nivoLightbox"> <i class="fa fa-arrows-alt"></i>
+                                                    </a> <a class="last" href="#"><i class="fa fa-chain"></i></a>
+                                                </div>
+                                                <!-- end overlay-buttons -->
+                                                <div class="overlay-bg"></div>
+                                                <!-- end overlay-bg -->
+                                            </div>
+                                            <!-- end overlay -->
+
+                                        </div>
+                                        <!-- end overlay-container -->
+
+                                        <figcaption>
+                                            <h5>Bright Eyes</h5>
+                                            <span>Web Design - SEO</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- end p-item -->
+                            </li>
+
+                            <li class="one-fourth">
+                                <div class="p-item">
+                                    <figure>
+                                        <div class="overlay-container">
+
+                                            <img src="{{ ASSET_PATH }}/img/portfolio/401.jpg" alt="Image description" />
+
+                                            <div class="overlay">
+                                                <div class="overlay-buttons">
+                                                    <a href="img/portfolio/large/001.jpg" data-nivo-rel="nivoLightbox"> <i class="fa fa-arrows-alt"></i>
+                                                    </a> <a class="last" href="#"><i class="fa fa-chain"></i></a>
+                                                </div>
+                                                <!-- end overlay-buttons -->
+                                                <div class="overlay-bg"></div>
+                                                <!-- end overlay-bg -->
+                                            </div>
+                                            <!-- end overlay -->
+
+                                        </div>
+                                        <!-- end overlay-container -->
+
+                                        <figcaption>
+                                            <h5>Sadly Sings Destiny</h5>
+                                            <span>Graphic Design - Web Design - SEO</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- end p-item -->
+                            </li>
+
+                            <li class="one-fourth">
+                                <div class="p-item">
+                                    <figure>
+                                        <div class="overlay-container">
+
+                                            <img src="{{ ASSET_PATH }}/img/portfolio/401.jpg" alt="Image description" />
+
+                                            <div class="overlay">
+                                                <div class="overlay-buttons">
+                                                    <a href="img/portfolio/large/001.jpg" data-nivo-rel="nivoLightbox"> <i class="fa fa-arrows-alt"></i>
+                                                    </a> <a class="last" href="#"><i class="fa fa-chain"></i></a>
+                                                </div>
+                                                <!-- end overlay-buttons -->
+                                                <div class="overlay-bg"></div>
+                                                <!-- end overlay-bg -->
+                                            </div>
+                                            <!-- end overlay -->
+
+                                        </div>
+                                        <!-- end overlay-container -->
+
+                                        <figcaption>
+                                            <h5>Turn The Page</h5>
+                                            <span>Graphic Design - Web Design - SEO</span>
+                                        </figcaption>
+                                    </figure>
+                                </div>
+                                <!-- end p-item -->
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- end carousel-1 -->
+                </div>
+                <!-- end carousel-wrap -->
+
+            </div>
+            <!-- end row -->
+        </div>
+        <!-- end container-center -->
+    </section>
+    <!-- end content -->
+
+    <section class="content light-section section-bg-1">
+        <div class="container-center">
+            <div class="col-row">
+
+                <div class="one-half">
+                    <div class="animated" data-animation="flipInX">
+                        <img src="{{ ASSET_PATH }}/img/slides/screen.png" alt="image description" />
+                    </div>
+                </div>
+                <!-- end  -->
+
+                <div class="one-half animated" data-animation="fadeInRight">
+                    <div class="section-title">
+                        <h2 class="heading-extra-big">Responsive Design</h2>
+                        <h3 class="sub-heading">Place for a Descriptive Subheading</h3>
+                    </div>
+                    <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer ut neque. Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                    <ul class="fa-ul custom-list green-list">
+                        <li><i class="fa-li fa fa-check"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit pellentesque</li>
+                        <li><i class="fa-li fa fa-check"></i>Suspendisse hendrerit id lacus id lobortis vestibulum quam elit</li>
+                        <li><i class="fa-li fa fa-check"></i>Fusce scelerisque pellentesqu suspendisse elementum adipiscing</li>
+                    </ul>
+                    <p>Vivamus nisi metus, molestie vel, gravida in, condimentum sit amet, nunc. Nam a nibh. Donec suscipit eros. Nam mi. Proin viverra leo ut odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.</p>
+                    <a class="button medium-btn" href="#">Continue Reading</a>
+                </div>
+                <!-- end  -->
+
+            </div>
+            <!-- end col-row -->
+        </div>
+        <!-- end container-center -->
+    </section>
+    <!-- end content -->
+
+    <section class="content">
+        <div class="container-center">
+
+            <div class="section-title align-center">
+                <h2>What Have Others Said</h2>
+                <h3 class="sub-heading">Few Words From Our Satisfied Customers</h3>
+            </div>
+
+            <div class="col-row">
+                <div class="one-half animated" data-animation="fadeInLeft">
+
+                    <div class="testimony cf">
+                        <div class="testimony-inner">
+                            <img class="portrait" src="{{ ASSET_PATH }}/img/team/001.jpg" alt="image description" />
+
+                            <blockquote class="testimony-text">â€œLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet purus quis metus imperdiet ferme ntum. Suspendisse hendrerit id lacus id lobortis.</blockquote>
+
+                            <div class="testimony-author">
+                                <h4>Hansi Kursch</h4>
+                                <span>Temptation</span>
+                            </div>
+                            <!-- end testimony-author -->
+                        </div>
+                        <!-- end testimony -->
+                    </div>
+                    <!-- end testimonial -->
+
+                </div>
+                <!-- end one-half -->
+
+                <div class="one-half animated" data-animation="fadeInRight">
+
+                    <div class="testimony cf">
+                        <div class="testimony-inner">
+                            <img class="portrait" src="{{ ASSET_PATH }}/img/team/001.jpg" alt="image description" />
+
+                            <blockquote class="testimony-text">â€œLorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet purus quis metus imperdiet ferme ntum. Suspendisse hendrerit id lacus id lobortis.</blockquote>
+
+                            <div class="testimony-author">
+                                <h4>Mark Williams</h4>
+                                <span>Motivation, CEO</span>
+                            </div>
+                            <!-- end testimony-author -->
+                        </div>
+                        <!-- end testimony -->
+                    </div>
+                    <!-- end testimonial -->
+
+                </div>
+                <!-- end one-half -->
+
+            </div>
+            <!-- end col-row -->
+
+        </div>
+        <!-- end container-center -->
+    </section>
+    <!-- end content -->
+
+    <div class="separator-1"></div>
+    <!-- end separator -->
+
+    <section class="content">
+        <div class="container-center">
+            <div class="section-title align-center">
+                <h2>Our Top Clients</h2>
+                <h3 class="sub-heading">Some of Our Satisfied Clients</h3>
+            </div>
+
+            <ul class="col-row clients">
+                <li class="one-sixth"><a href="#"><img src="{{ ASSET_PATH }}/img/dummy-logo/001.png" alt="image description" /></a></li>
+                <li class="one-sixth"><a href="#"><img src="{{ ASSET_PATH }}/img/dummy-logo/002.png" alt="image description" /></a></li>
+                <li class="one-sixth"><a href="#"><img src="{{ ASSET_PATH }}/img/dummy-logo/003.png" alt="image description" /></a></li>
+                <li class="one-sixth"><a href="#"><img src="{{ ASSET_PATH }}/img/dummy-logo/001.png" alt="image description" /></a></li>
+                <li class="one-sixth"><a href="#"><img src="{{ ASSET_PATH }}/img/dummy-logo/005.png" alt="image description" /></a></li>
+                <li class="one-sixth"><a href="#"><img src="{{ ASSET_PATH }}/img/dummy-logo/006.png" alt="image description" /></a></li>
+            </ul>
+
+        </div>
+        <!-- end container-center -->
+    </section>
+
+    <section class="twitter-holder section-bg-1">
+        <div class="container-center">
+            <h2>Follow us on Twitter!</h2>
+            <div class="twitter-feed"></div>
+            <!-- end twitter-feed -->
+            <a href="#" class="twitter-icon"><i class="fa fa-twitter"></i></a>
+            <!-- end twitter-icon -->
+        </div>
+        <!-- container-center -->
+    </section>
+
+    <footer id="footer" class="content">
+        <div class="footer-main container-center">
+            <div class="col-row">
+
+                <div class="one-fourth">
+                    <div class="logo">
+                        <a href="index.html"><img src="{{ ASSET_PATH }}/img/footer-logo.png" alt="Logo Estimation" /></a>
+                    </div>
+                    <!-- end logo -->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque imperdiet purus</p>
+
+                    <ul class="social-links-square-2 cf">
+                        <li title="Facebook"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li title="Twitter"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li title="Skype"><a href="#"><i class="fa fa-skype"></i></a></li>
+                        <li title="Flickr"><a href="#"><i class="fa fa-flickr"></i></a></li>
+                        <li title="Instagram"><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li title="Dribbble"><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                    </ul>
+                </div>
+                <!-- end  -->
+
+                <div class="one-fourth cf">
+                    <div class="contact-info">
+                        <h4>Contact Details</h4>
+
+                        <strong>Address:</strong> <br /> 3607 Terra Street<br /> WA 98240<br /> <br /> <strong>Phone:</strong> 360-321-1231 <br /> <strong>Fax:</strong> 360-421-1231 <br /> <br /> <strong>E-mail:</strong> <a href="#">johndoe@ipsum.com</a> <br /> <strong>Website:</strong> <a href="#">www.ipsum.com</a>
+                    </div>
+                    <!-- end contact-info -->
+                </div>
+                <!-- end  -->
+
+                <div class="one-fourth">
+                    <h4>Latest Blog Posts</h4>
+                    <ul class="latest-blog-posts">
+                        <li class="cf">
+                            <div class="blog-icon">
+                                <i class="fa fa-film"></i>
+                            </div>
+                            <div class="post-details">
+                                <h5>
+                                    <a href="#">Wheel of Time</a>
+                                </h5>
+                                <span class="post-date">August 18, 2013</span>
+                            </div>
+                        </li>
+                        <li class="cf">
+                            <div class="blog-icon">
+                                <i class="fa fa-picture-o"></i>
+                            </div>
+                            <div class="post-details">
+                                <h5>
+                                    <a href="#">The Soulforged</a>
+                                </h5>
+                                <span class="post-date">August 18, 2013</span>
+                            </div>
+                        </li>
+                        <li class="cf">
+                            <div class="blog-icon">
+                                <i class="fa fa-picture-o"></i>
+                            </div>
+                            <div class="post-details">
+                                <h5>
+                                    <a href="#">Mordred's Song</a>
+                                </h5>
+                                <span class="post-date">August 18, 2013</span>
+                            </div>
+                        </li>
+                    </ul>
+
+                </div>
+                <!-- end  -->
+
+                <div class="one-fourth">
+                    <h4>Flickr Photostream</h4>
+
+                    <div class="flickr-images"></div>
+
+                </div>
+                <!-- end  -->
+
+            </div>
+            <!-- end col-row -->
+
+            <div class="separator-1"></div>
+            <!-- end separator -->
+
+            <div class="col-row">
+
+                <div class="one-fourth">
+                    <h4>Useful Links</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa fa-angle-right"></i><a href="#">Fusce Scelerisque</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Suspendisse Elementum</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Mauris Lorem Velit</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Duis Necpurus Tellus</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Lorem Ipsum</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Pellentesque dapibus</a></li>
+                    </ul>
+                </div>
+
+                <div class="one-fourth">
+                    <h4>More Useful Links</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa fa-angle-right"></i><a href="#">Fusce Scelerisque</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Suspendisse Elementum</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Mauris Lorem Velit</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Duis Necpurus Tellus</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Lorem Ipsum</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Pellentesque dapibus</a></li>
+                    </ul>
+                </div>
+
+                <div class="one-fourth">
+                    <h4>Even More Useful Links</h4>
+                    <ul class="footer-links">
+                        <li><i class="fa fa-angle-right"></i><a href="#">Fusce Scelerisque</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Suspendisse Elementum</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Mauris Lorem Velit</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Duis Necpurus Tellus</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Lorem Ipsum</a></li>
+                        <li><i class="fa fa-angle-right"></i><a href="#">Pellentesque dapibus</a></li>
+                    </ul>
+                </div>
+
+                <div class="tag-cloud one-fourth cf">
+                    <h4>Tag Cloud</h4>
+                    <a href="#">Web Design</a> <a href="#">Graphic Design</a> <a href="#">Design</a> <a href="#">Video</a> <a href="#">Marketing</a> <a href="#">SEO</a> <a href="#">Logo</a> <a href="#">Animation</a> <a href="#">Responsive</a> <a href="#">jQuery</a> <a href="#">PHP</a>
+                </div>
+
+            </div>
+            <!-- end col-row -->
+
+        </div>
+        <!-- end footer-main -->
+
+        <div class="footer-bottom container-center cf">
+
+            <div class="bottom-left">
+                <p class="copyright">Copyright &copy; 2014 Estimation. All rights reserved</p>
+            </div>
+            <!-- end bottom-left -->
+
+            <div class="bottom-right">
+                <nav>
+                    <ul id="footer-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="portfolio-4.html">Portfolio</a></li>
+                        <li><a href="services-full.html">Services</a></li>
+                        <li><a class="active" href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- end bottom-right -->
+
+        </div>
+        <!-- end footer-bottom -->
+    </footer>
+
+    <div class="scroll-top">
+        <a href="#"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <!--*************************
+*                           *
+*      JAVASCRIPT FILES     *
+*                           *
+************************* -->
+
+    <!--imports jquery-->
+    <script src="{{ ASSET_PATH }}/js/jquery-1.10.2.min.js"></script>
+    <script src="{{ ASSET_PATH }}/js/jquery-migrate-1.1.0.min.js"></script>
+
+    <!-- used for the contact form -->
+    <script src="{{ ASSET_PATH }}/js/jquery.form.js"></script>
+    <!-- used for the the fun facts counter -->
+    <script src="{{ ASSET_PATH }}/js/jquery.countTo.js"></script>
+    <!-- for displaying flickr images -->
+    <script src="{{ ASSET_PATH }}/js/jflickrfeed.min.js"></script>
+    <!-- used to trigger the animations on elements -->
+    <script src="{{ ASSET_PATH }}/js/waypoints.min.js"></script>
+    <!-- used to stick the navigation menu to top of the screen on smaller displays -->
+    <script src="{{ ASSET_PATH }}/js/waypoints-sticky.min.js"></script>
+    <!-- used for rotating through tweets -->
+    <script src="{{ ASSET_PATH }}/js/vTicker.js"></script>
+    <!-- imports jQuery UI, used for toggles, accordions, tabs and tooltips -->
+    <script src="{{ ASSET_PATH }}/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <!-- used for smooth scrolling on local links -->
+    <script src="{{ ASSET_PATH }}/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+    <!-- used for opening images in a Lightbox gallery -->
+    <script src="{{ ASSET_PATH }}/js/nivo-lightbox.min.js"></script>
+    <!-- used for displaying tweets -->
+    <script src="{{ ASSET_PATH }}/js/jquery.tweet.js"></script>
+    <!-- flexslider plugin, used for image galleries (blog post preview, portfolio single page) and carousels -->
+    <script src="{{ ASSET_PATH }}/js/jquery.flexslider-min.js"></script>
+    <!-- used for sorting portfolio items -->
+    <script src="{{ ASSET_PATH }}/js/jquery.isotope.js"></script>
+    <!-- for dropdown menus -->
+    <script src="{{ ASSET_PATH }}/js/superfish.js"></script>
+    <!-- for detecting Retina displays and loading images accordingly -->
+    <script src="{{ ASSET_PATH }}/js/retina-1.1.0.min.js"></script>
+    <!-- used for sharing post pages -->
+    <script src="{{ ASSET_PATH }}/js/jquery.sharrre.min.js"></script>
+    <!-- easing plugin for easing animation effects -->
+    <script src="{{ ASSET_PATH }}/js/jquery-easing-1.3.js"></script>
+    <!-- Slider Revolution plugin -->
+    <script src="{{ ASSET_PATH }}/plugins/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="{{ ASSET_PATH }}/plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <!--imports custom javascript code-->
+    <script src="{{ ASSET_PATH }}/js/custom.js"></script>
+
+    {
+</body>
+</html>
