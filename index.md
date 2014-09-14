@@ -1,6 +1,6 @@
 ---
 layout: landing
-title: Hello World!
+title: Penn Assurance Software
 tagline: Supporting tagline
 ---
 {% include JB/setup %}
